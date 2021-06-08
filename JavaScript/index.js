@@ -16,9 +16,12 @@ function clock(){
     let seconds = date.getSeconds();
     let prime = 'AM';
 
-    if(hours > 12){
+    if(hours >= 12){
         hours = hours - 12;
         prime = 'PM';
+    }
+    if(hours == 00){
+        hours = 12;
     }
 
     hours = (hours > 9) ? hours : `0${hours}`;
@@ -29,6 +32,8 @@ function clock(){
     appendTime.innerText = time;
     appendDay.innerText = days[dayNumber];
     appendDate.innerText = `${month}/${dayDate}/${year}`;
+
+    console.log(hours);
 };
 clock();
 setInterval(clock, 1000);

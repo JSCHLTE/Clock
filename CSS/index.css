@@ -14,9 +14,11 @@ body{
     justify-content: center;
     font-family: sans-serif;
     flex-direction: column;
+    user-select: none;
+    overflow: hidden;
 }
 h1{
-    font-size: 35pt;
+    font-size: calc(5pt + 5vmin);
     margin: 20px 0;
 }
 p{
